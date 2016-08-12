@@ -14,13 +14,13 @@ test=efg&foo=bar3
 
 Issue this command
 
-``` bash
+```bash
 pq -R 'test=(?<test>[a-zA-z]*)&foo=(?<foo>[a-zA-z]*)' -c test,foo test.txt
 ```
 
 then output will be
 
-```html
+```
 abc,bar
 def,bar
 efg,bar
@@ -38,6 +38,10 @@ usage: pq -R <regular-expression> -c <columnlist> [<file> ...]
  -P <arg>   level of parallelism
  -R <arg>   the regular expression with groups
 ```
+
+# Download
+
+Please download the binary from the [release](https://github.com/tenmax/pq/releases) tag.
 
 # Reference
 
