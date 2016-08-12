@@ -1,6 +1,6 @@
 # pq
 
-A tool to translate regular expression to csv
+A tool to transform unstructed text to csv by regular expression.
 
 # Sample
 
