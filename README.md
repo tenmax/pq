@@ -43,6 +43,14 @@ usage: pq -R <regular-expression> -c <columnlist> [<file> ...]
 
 Please download the binary from the [release](https://github.com/tenmax/pq/releases) tag.
 
+## Install by Homebrew in Mac
+```bash
+brew update
+brew untap tenmax/azure
+brew tap tenmax/azure
+brew install pq
+```
+
 # Reference
 
 This tool is powered by [poppy](http://tenmax.github.io/poppy/)
