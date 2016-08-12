@@ -4,8 +4,8 @@ import io.tenmax.poppy.DataFrame;
 import io.tenmax.poppy.DataRow;
 import org.junit.Test;
 
+import java.io.InputStream;
 import java.util.Arrays;
-import java.util.Iterator;
 
 import static org.junit.Assert.*;
 
@@ -14,8 +14,10 @@ public class RegexDataSourceTest {
     @Test
     public void testName() throws Exception {
 
+        InputStream stream = RegexDataSourceTest.class.getClassLoader().getResourceAsStream("test.txt");
+
         RegexDataSource ds = new RegexDataSource(
-                Arrays.asList(RegexDataSourceTest.class.getResourceAsStream("test.json")),
+                Arrays.asList(stream),
                 "test=(?<test>[a-zA-z]*)&foo=(?<foo>[a-zA-z]*)",
                 new String[]{"test", "foo"});
 
