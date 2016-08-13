@@ -45,8 +45,6 @@ Please download the binary from the [release](https://github.com/tenmax/pq/relea
 
 ## Install by Homebrew in Mac
 ```bash
-brew update
-brew untap tenmax/azure
 brew tap tenmax/azure
 brew install pq
 ```
