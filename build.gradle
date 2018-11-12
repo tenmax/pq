@@ -1,10 +1,28 @@
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'com.palantir.graal'
 
 mainClassName = 'io.tenmax.pq.PQMain'
 
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.palantir.graal:gradle-graal:0.2.0-3-g7f884ba"
+    }
+}
+
 repositories {
     jcenter()
+}
+
+graal {
+    mainClass 'io.tenmax.pq.PQMain'
+    outputName 'pq'
+    graalVersion '1.0.0-rc9'
 }
 
 // In this section you declare the dependencies for your production and test code
